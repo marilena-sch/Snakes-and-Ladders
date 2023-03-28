@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="myStyle.css">
+    <script src="initBoard.js"></script>
+    <script src="game.js"></script>
+    <title>Snakes & Ladders</title>
+    </head>
+    <body onload=initBoard()>
+        <table  id="mainTable">
+        </table>
+        <div class="column1 column1Width" id="roll_result" style="background-color:-steelblue; ">
+            <h3>
+                Dice Rolls
+            </h3>
+        </div>
+        <div class="column column3Width" id="message" style="background-color:-steelblue;">
+            <h3>
+                Info Box
+            </h3>
+            <p id="red_python">Red player doesn't have python effect.</p>
+            <p id="white_python">White player doesn't have python effect.</p>
+        </div>
+        <h1 style="position: absolute; right:13%; top:6%; display: none;" id="header"></h1>
+        <br>
+        <div>
+            <button onclick="getPlayerTurn()" id="first_player" class="first_player">Start Game</button>
+            <button id="general_dice" onclick="getRandomDiceRole()" class="general_dice" disabled>
+                <img src='ImagesDice/dice.gif' class="gif">
+            </button>
+            <img class="dice_div" id="dice_div" style="display: none;">
+    </div>
+    <div>
+        <button onclick="play()" id="player_red" disabled>
+            <img src='ImagesDice/redPawn.png'>
+        </button>
+        <button onclick="play()" id="player_white" disabled>
+            <img src='ImagesDice/whitePawn.png'>
+        </button>
+    </div>
+
+    </body>
+
+
+</html>
+
+
